@@ -3,6 +3,6 @@
 	<title>Ini Account</title>
 </head>
 <body>
-Halaman Account
+Halaman Dashboard
 </body>
 </html>

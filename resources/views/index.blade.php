@@ -159,7 +159,7 @@
               <h4 class="text-uppercase m-0">Email</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">tellusipb@gmail.com</a>
+                <a href="https://www.gmail.com">tellusipb@gmail.com</a>
               </div>
             </div>
           </div>
