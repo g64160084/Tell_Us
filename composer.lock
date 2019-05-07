@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "6cab470a7214d82cc4f9ad5341b06b95",
     "packages": [
+        {
+            "name": "devdojo/chatter",
+            "version": "0.1.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/chatter.git",
+                "reference": "ed184aa98aef975e0b53d053b930f5a2427b6005"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thedevdojo/chatter/zipball/ed184aa98aef975e0b53d053b930f5a2427b6005",
+                "reference": "ed184aa98aef975e0b53d053b930f5a2427b6005",
+                "shasum": ""
+            },
+            "require-dev": {
+                "illuminate/cache": "~5.1.20|5.2.*|5.3.*",
+                "illuminate/console": "~5.1.20|5.2.*|5.3.*",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DevDojo\\Chatter\\": "/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tony Lea",
+                    "email": "tony@devdojo.com"
+                }
+            ],
+            "description": "A simple forum package for your laravel app",
+            "time": "2017-01-16T05:42:45+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
