@@ -33,7 +33,12 @@ Route::get('/account', function(){
 Route::get('/createthread', function(){
 	return view('createthread');
 });
-
+Route::get('/thread', function(){
+	return view('thread');
+});
+Route::get('/input', 'CreateThreadController@input');
+ 
+Route::post('/proses', 'CreateThreadController@proses');
 
    
 
