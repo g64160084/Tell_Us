@@ -1,10 +1,5 @@
 @extends ('layouts.front')
-
-@section('')
-
-
 @section('content')
-
     @include('layouts.partial.error')
     @include('layouts.partial.success')
 
@@ -28,7 +23,7 @@
 
                 <div class="form-group">
                     <label for="thread">Thread</label>
-                    <textarea type="text" class="form-control" name="thread" id="" placeholder="Input..." value="{{old('thread')}}"></textarea>>
+                    <textarea type="text" class="form-control" name="thread" id="" placeholder="Input...">{{old('thread')}}</textarea>>
                 </div>
 
 

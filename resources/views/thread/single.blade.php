@@ -5,16 +5,13 @@
 
     <h4>{{$thread->subject}}</h4>
     <hr>
-
     <div class="thread-details">
-
         {{$thread->thread}}
-
     </div>
     <br>
 
+    @if(auth()->user()->id == $thread->user_id)
     <div class="actions">
-
         {{--//edit--}}
         <a href="{{route('thread.edit',$thread->id)}}" class="btn btn-info btn-xs">Edit</a>
         {{--//delete form--}}
@@ -29,5 +26,6 @@
 
 
     </div>
+    @endif
 
 @endsection
