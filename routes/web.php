@@ -21,32 +21,4 @@ Route::get(/**
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/', function () {
-    return view('index');
-    // return view('welcome');
-});
-Route::get('/dashboard', function(){
-	return view('dashboard');
-});
-Route::get('/account', function(){
-	return view('account');
-});
-Route::get('/createthread', function(){
-	return view('createthread');
-});
-Route::get('/thread', function(){
-	return view('thread');
-});
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::resource('/thread','ThreadController');
