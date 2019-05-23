@@ -25,6 +25,12 @@
                     <label for="thread">Thread</label>
                     <textarea type="text" class="form-control" name="thread" id="" placeholder="Input...">{{old('thread')}}</textarea>>
                 </div>
+                <!-- captcha no suport di local
+                <div class="form-group">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                </div>
+                -->
 
 
                 <button type="submit" class="btn btn-primary" >Submit</button>
