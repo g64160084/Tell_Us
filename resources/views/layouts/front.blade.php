@@ -15,6 +15,9 @@
 @yield('banner')
 
 <div class="container">
+
+    @include('layouts.partial.error')
+    @include('layouts.partial.success')
     <div class="row">
         {{--//category section--}}
         @section('category')
@@ -36,7 +39,7 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
 

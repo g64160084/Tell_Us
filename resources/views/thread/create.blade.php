@@ -1,9 +1,5 @@
 @extends ('layouts.front')
 @section('content')
-    @include('layouts.partial.error')
-    @include('layouts.partial.success')
-
-
     <div class="row">
 
         <div class="well">
