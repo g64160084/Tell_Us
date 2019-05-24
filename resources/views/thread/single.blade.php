@@ -13,6 +13,8 @@
     @if(auth()->user()->id == $thread->user_id)
     <div class="actions">
         {{--//edit--}}
+        <button id="likeIt" class="btn btn-default btn-xs">{{$thread->likes()->count()}}</button>
+        <button id="likeIt" class="btn btn-default btn-xs {{$thread->isLiked()?"liked":""}}" onclick="likeIt('{{$thread->id}}',this)"><span class="glyphicon glyphicon-thumbs-up"></span></button>
         <a href="{{route('thread.edit',$thread->id)}}" class="btn btn-info btn-xs">Edit</a>
         {{--//delete form--}}
 
@@ -173,7 +175,23 @@
 @section('js')
     <script>
         function toogleReply(commentId) {
+            var csrftoken='{{csrf_token()}}';
             $('.reply-form-'+commentId).toggleClass('hide');
+        }
+        
+        function likeIt(threadId,elem) {
+            var csrftoken='{{csrf_token()}}';
+            $.post('{{route('toggleLike')}}',{threadId:threadId,_token:csrftoken},function (data) {
+                console.log(data);
+                if(data.message==='liked'){
+                    //$(elem).css({color:'red'});
+                    $(elem).addClass('liked');
+                }else
+                    {
+                        $(elem).removeClass('liked');
+                    }
+
+            });
         }
 
     </script>

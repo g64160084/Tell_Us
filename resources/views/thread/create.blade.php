@@ -13,7 +13,12 @@
 
                 <div class="form-group">
                     <label for="type">Type</label>
-                    <input type="text" class="form-control" name="type" id="" placeholder="Input..." value="{{old('type')}}">
+                    <select class="custom-select mr-sm-2 form-control" id="" name="type">
+                        <option value="1">Transportasi</option>
+                        <option value="2">Fasilitas</option>
+                        <option value="3">Kebersihan</option>
+                        <option value="4">Lain-Lain</option>
+                    </select>
 
                 </div>
 
