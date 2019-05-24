@@ -15,13 +15,23 @@ class CommentController extends Controller
             'body'=>'required'
         ]);
 
-        $comment=new Comment();
-        $comment->body=$request->body;
-        $comment->user_id=auth()->user()->id;
-
-        $thread->comments()->save($comment);
+        // Disimplekan dengan memanggil trait
+        $thread->addComment($request->body);
 
         return back()->withMessage('Coment Created');
+
+    }
+
+    public function addReplyComment(Request $request , comment $comment)
+    {
+        $this->validate($request,[
+            'body'=>'required'
+        ]);
+
+
+        $comment->addComment($request->body);
+
+        return back()->withMessage('Reply Created');
 
     }
 

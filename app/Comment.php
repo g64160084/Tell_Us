@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    use commentableTrait;
     /**
      * Get all of the owning commentable models.
      */
@@ -21,3 +22,4 @@ class Comment extends Model
         return $this->belongsTo(user::class);
     }
 }
+

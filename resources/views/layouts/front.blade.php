@@ -28,7 +28,7 @@
             <div class="row content-heading">
                 <h4>@yield('heading')</h4>
             </div>
-            <div class="content-wrap well">
+            <div class="content-wrap">
                 @yield('content')
             </div>
         </div>
@@ -40,6 +40,8 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+@yield('js')
 </body>
 </html>
 
